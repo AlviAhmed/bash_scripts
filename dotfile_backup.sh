@@ -50,9 +50,9 @@ printf "Git Push \n"
 git push origin master
 
 printf "Backing up bash scripts to usb" 
-cp -urv ~/bash_scripts/.  /media/al/Backup Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/bash_scripts
+cp -urv ~/bash_scripts/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/bash_scripts
 
 printf "Backing up dot files to usb" 
-cp -urv ~/Documents/Git_Projects/dot_config_files/.  /media/al/Backup Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/dot_config_files
+cp -urv ~/Documents/Git_Projects/dot_config_files/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/dot_config_files
 
 
