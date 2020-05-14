@@ -15,3 +15,4 @@ else                            # if the command runs again and file is there, d
 	xdo show $GOO
 fi
 
+

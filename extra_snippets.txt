@@ -1,0 +1,14 @@
+# TOGGLE=$HOME/.dec_chg.txt            # variable for file creation
+
+# RES=$(cat $TOGGLE) 
+# BAT=$(/sys/class/power_supply/BAT0/capacity)
+# if [$RES != FOO] 
+# 	then  
+# 	sed -i '1d' $TOGGLE
+# 	echo $RES >> $TOGGLE	
+# fi 
+
+
+
+# echo $FOO >> $TOGGLE 
+# echo $BAT >> $TOGGLE

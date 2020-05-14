@@ -1,9 +1,5 @@
 #!/bin/bash 
 
-xrandr --output VGA-1 --auto --output LVDS-1 --off --rotate normal --pos 0x0 # putting all display on lvds
+xrandr --output VGA-1 --auto --output LVDS-1 --off --rotate normal --pos 0x0 # putting all display on lvds 
 
-#bspc monitor VGA-1 -d 1 2 3 4 5 6 7 8 9 0
-# killall -q polybar 
-# # Wait until the processes have been shut down
-# while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-# polybar example2 -r &
+~/.config/polybar/launch
