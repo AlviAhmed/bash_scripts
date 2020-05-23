@@ -34,18 +34,8 @@ cp -urv ~/bash_scripts/.  ~/Documents/Git_Projects/bash_scripts/
 printf "Cd into Git Repo \n" 
 cd ~/Documents/Git_Projects/dot_config_files/
 
-printf "Adding and commiting to dot config file repo"
-
 printf "Git Add \n"    
 git add -A 
-
-printf "Git Commit \n"    
-git commit -m "update"
-
-printf "Git Push \n"    
-git push origin master
-
-printf "Adding and commiting to bash_scripts repo" 
 
 printf "Cd into Git Repo \n" 
 cd ~/Documents/Git_Projects/bash_scripts
