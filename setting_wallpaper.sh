@@ -12,6 +12,6 @@ string_sel=$dir_sel$delim
 str2=$string_sel$wal_sel
 cp $wal_sel  ~/Pictures/wallpapers/wallpaper.png
 
-feh --bg-fill ~/Pictures/wallpapers/wallpaper.png
-
+feh --bg-fill ~/Pictures/wallpapers/wallpaper.png 
+wal -i ~/Pictures/wallpapers/wallpaper.png
 notify-send "Changing wallpaper to $wal_sel" --icon=emblem-photos
