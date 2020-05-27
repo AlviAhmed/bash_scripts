@@ -5,11 +5,5 @@ xrdb ~/.Xresources
 killall emacs
 emacs --daemon 
 emacsclient -n -create-frame --alternate-editor=""
+screen bash ~/.config/polybar/launch &
 emacsclient -e "(load-theme 'xresources t)"
-
-if [ "$DESKTOP_SESSION" = "bspwm" ] 
-then  
-	notify-send "resetting polybar" --icon=preferences-desktop-wallpaper
-	screen bash ~/.config/polybar/launch &
-fi 
-
