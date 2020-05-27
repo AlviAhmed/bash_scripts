@@ -1,5 +1,12 @@
 #!/bin/bash 
 
+printf "Enter a commit message for dot files \n" 
+read dot_message
+printf "\n"
+printf "Enter a commit message for bash scripts repo \n"
+read bash_message
+printf "\n"
+
 printf "Will now be backuping necessary dot files \n"  
 
 printf "Backuping emacs directory \n"  
@@ -26,16 +33,27 @@ cp -urv ~/.config/sxhkd ~/Documents/Git_Projects/dot_config_files/
 printf "Backing up xprofile" 
 cp -urv ~/.xprofile ~/Documents/Git_Projects/dot_config_files/
 
+printf "Backing up Xresources" 
+cp -urv ~/.Xresources ~/Documents/Git_Projects/dot_config_files/
+
 printf "Backing up bash_scripts" 
 cp -urv ~/bash_scripts/.  ~/Documents/Git_Projects/bash_scripts/
-
-
 
 printf "Cd into Git Repo \n" 
 cd ~/Documents/Git_Projects/dot_config_files/
 
+printf "Adding and commiting to dot config file repo \n"
+
 printf "Git Add \n"    
 git add -A 
+
+printf "Git Commit \n"    
+git commit -m "$dot_message"
+
+printf "Git Push \n"    
+git push origin master
+
+printf "Adding and commiting to bash_scripts repo \n" 
 
 printf "Cd into Git Repo \n" 
 cd ~/Documents/Git_Projects/bash_scripts
@@ -44,7 +62,7 @@ printf "Git Add \n"
 git add -A 
 
 printf "Git Commit \n"    
-git commit -m "update"
+git commit -m "$bash_message"
 
 printf "Git Push \n"    
 git push origin master

@@ -36,6 +36,9 @@ cp -urv ~/.xprofile ~/Documents/Git_Projects/dot_config_files/
 printf "Backing up Xresources" 
 cp -urv ~/.Xresources ~/Documents/Git_Projects/dot_config_files/
 
+printf "Backing up backing up herbsluft config" 
+cp -urv ~/.config/herbstluftwm/autostart ~/Documents/Git_Projects/dot_config_files/
+
 printf "Backing up bash_scripts" 
 cp -urv ~/bash_scripts/.  ~/Documents/Git_Projects/bash_scripts/
 
