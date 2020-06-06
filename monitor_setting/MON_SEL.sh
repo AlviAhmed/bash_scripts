@@ -16,7 +16,6 @@ case "$mon_sel" in
 	"dp1") notify-send "DP1 only" --icon=video-display && xrandr --output LVDS-1 --off --output DP-1 --auto --rotate normal --pos 0x0
 	;; 
 	"lvdsdp1") notify-send "DP1 w/ LVDS" --icon=video-display && xrandr --output DP-1 --off --output LVDS-1 --auto --rotate normal --pos 0x0
-	
 esac
 
 if [ "$DESKTOP_SESSION" = "bspwm" ] 
