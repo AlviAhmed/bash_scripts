@@ -15,6 +15,9 @@ cp -urv ~/.emacs.d ~/Documents/Git_Projects/dot_config_files  && cp -urv ~/.emac
 printf "Backing .bashrc \n"    
 cp -urv ~/.bashrc ~/Documents/Git_Projects/dot_config_files
 
+printf "Backing dwm \n"    
+cp -urv ~/dwm/. ~/Documents/Git_Projects/dot_config_files/dwm/
+
 printf "Backing .bash_aliases \n"    
 cp -urv ~/.bash_aliases ~/Documents/Git_Projects/dot_config_files/.bash_aliases  
 
