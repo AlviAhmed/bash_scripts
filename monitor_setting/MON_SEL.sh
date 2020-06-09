@@ -24,7 +24,7 @@ then
 	~/.config/polybar/launch
 fi 
 	
-
+ 
 
 
 
