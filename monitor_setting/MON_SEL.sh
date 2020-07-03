@@ -18,11 +18,11 @@ case "$mon_sel" in
 	"lvdsdp1") notify-send "DP1 w/ LVDS" --icon=video-display && xrandr --output DP-1 --off --output LVDS-1 --auto --rotate normal --pos 0x0
 esac
 
-if [ "$DESKTOP_SESSION" = "bspwm" ] 
-then  
-	notify-send "resetting polybar" --icon=preferences-desktop-wallpaper
-	~/.config/polybar/launch
-fi 
+# if [ "$DESKTOP_SESSION" = "bspwm" ] 
+# then  
+# 	notify-send "resetting polybar" --icon=preferences-desktop-wallpaper
+# 	~/.config/polybar/launch
+# fi 
 	
  
 
