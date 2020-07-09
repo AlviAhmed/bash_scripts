@@ -3,9 +3,9 @@
 mon_sel="${1}"
 
 case "$mon_sel" in 
-	"vga") notify-send "VGA only" --icon=video-display && xrandr --output VGA-1 --auto --output LVDS-1 --off --rotate normal --pos 0x0 
+	"vga") notify-send "VGA only" --icon=video-display && xrandr --output VGA-1 --auto --output LVDS-1 --off --rotate normal --pos 0x0 && bspc monitor VGA-1 -d 1 2 3 4 5 6 7 8 9
 	;; 
-	"lvds")notify-send "LVDS only" --icon=video-display &&  xrandr --output LVDS-1 --auto  --rotate normal --pos 0x0 --output VGA-1 --off   
+	"lvds")notify-send "LVDS only" --icon=video-display &&  xrandr --output LVDS-1 --auto  --rotate normal --pos 0x0 --output VGA-1 --off && bspc monitor LVDS-1 -d 1 2 3 4 5 6 7 8 9
 	;; 
 	"dualr") notify-send "Dual Monitor, Right" --icon=video-display &&  xrandr --output LVDS-1 --auto --rotate normal --pos 0x0 --output VGA-1 --auto  --rotate normal --right-of LVDS-1
 	;; 
