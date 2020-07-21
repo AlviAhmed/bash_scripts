@@ -33,6 +33,9 @@ cp -urv ~/.config/bspwm ~/Documents/Git_Projects/dot_config_files/
 printf "Backing up polybar"
 cp -urv ~/.config/polybar ~/Documents/Git_Projects/dot_config_files/
 
+printf "Backing up tint2"
+cp -urv ~/.config/tint2/tint2rc ~/Documents/Git_Projects/dot_config_files/
+
 printf "Backing up sxhkd"
 cp -urv ~/.config/sxhkd ~/Documents/Git_Projects/dot_config_files/
 
