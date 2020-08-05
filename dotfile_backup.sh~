@@ -12,6 +12,9 @@ printf "Will now be backuping necessary dot files \n"
 printf "Backuping emacs directory \n"  
 cp -urv ~/.emacs.d ~/Documents/Git_Projects/dot_config_files  && cp -urv ~/.emacs.d ~/back_emacs/
 
+printf "Backing up the bin directory \n" 
+cp -urv ~/bin ~/Documents/Git_Projects/bash_scripts/.
+
 printf "Backing .bashrc \n"    
 cp -urv ~/.bashrc ~/Documents/Git_Projects/dot_config_files
 
@@ -29,6 +32,9 @@ cp -urv ~/.config/bspwm ~/Documents/Git_Projects/dot_config_files/
 
 printf "Backing up polybar"
 cp -urv ~/.config/polybar ~/Documents/Git_Projects/dot_config_files/
+
+printf "Backing up tint2"
+cp -urv ~/.config/tint2/tint2rc ~/Documents/Git_Projects/dot_config_files/
 
 printf "Backing up sxhkd"
 cp -urv ~/.config/sxhkd ~/Documents/Git_Projects/dot_config_files/

@@ -15,11 +15,14 @@ cp -urv ~/.emacs.d ~/Documents/Git_Projects/dot_config_files  && cp -urv ~/.emac
 printf "Backing up the bin directory \n" 
 cp -urv ~/bin ~/Documents/Git_Projects/bash_scripts/.
 
-printf "Backing .bashrc \n"    
+printf "Backing up .bashrc \n"    
 cp -urv ~/.bashrc ~/Documents/Git_Projects/dot_config_files
 
-printf "Backing dwm \n"    
+printf "Backing up dwm \n"    
 cp -urv ~/dwm/. ~/Documents/Git_Projects/dot_config_files/dwm/
+
+printf "Backing up openbox \n"    
+cp -urv ~/.config/openbox/. ~/Documents/Git_Projects/dot_config_files/openbox/
 
 printf "Backing .bash_aliases \n"    
 cp -urv ~/.bash_aliases ~/Documents/Git_Projects/dot_config_files/.bash_aliases  
