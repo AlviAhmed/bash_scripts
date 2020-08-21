@@ -1,0 +1,4 @@
+#!/bin/bash
+
+uin=$1
+emacsclient -nw $uin
