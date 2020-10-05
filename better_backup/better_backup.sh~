@@ -1,0 +1,12 @@
+#!/bin/bash  
+
+$cust_dest = "hello"
+printf "Default destination or custom? \n"
+read cust_dest
+
+if [ -z "$cust_dest" ] 
+
+$bck_type = "${1}"
+
+case "$bck_type" in
+    "tar" 
