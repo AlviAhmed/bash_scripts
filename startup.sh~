@@ -1,0 +1,3 @@
+if [ "$DESKTOP_SESSION" = "bspwm" ] 
+then
+    echo "BSPWM Detected, continuing settings"
