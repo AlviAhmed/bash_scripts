@@ -10,7 +10,7 @@ printf "\n"
 printf "Will now be backuping necessary dot files \n"  
 
 printf "Backuping emacs directory \n"  
-cp -urv ~/.emacs.d ~/Documents/Git_Projects/dot_config_files  && cp -urv ~/.emacs.d ~/back_emacs/
+cp -urv ~/.emacs.d/{myinit.el,myinit.org,init.el} ~/Documents/Git_Projects/dot_config_files  && cp -urv ~/.emacs.d ~/back_emacs/
 
 printf "Backing up the bin directory \n" 
 cp -urv ~/bin ~/Documents/Git_Projects/bash_scripts/.
@@ -82,10 +82,10 @@ git commit -m "$bash_message"
 printf "Git Push \n"    
 git push origin master
 
-printf "Backing up bash scripts to usb" 
-cp -urv ~/bash_scripts/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/bash_scripts
+# printf "Backing up bash scripts to usb" 
+# cp -urv ~/bash_scripts/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/bash_scripts
 
-printf "Backing up dot files to usb" 
-cp -urv ~/Documents/Git_Projects/dot_config_files/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/dot_config_files
+# printf "Backing up dot files to usb" 
+# cp -urv ~/Documents/Git_Projects/dot_config_files/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/dot_config_files
 
 

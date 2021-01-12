@@ -3,8 +3,8 @@
 # wal_sel="${1}" 
 # cp $wal_sel ~/Pictures/wallpapers/wallpaper.png
 # notify-send "Changed Wallpaper"
-#!bin/bash 
 
+#!bin/bash  
 wal_sel=$1
 dir_sel=$(pwd) 
 delim="/"

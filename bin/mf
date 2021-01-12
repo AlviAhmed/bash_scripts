@@ -1,0 +1,3 @@
+#!/bin/bash
+input="${1}"
+ffmpeg -i "$input" "${input/%m4a/wav}"

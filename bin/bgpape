@@ -1,14 +1,10 @@
+#!/bin/bash
+
 wal_sel=$1
 dir_sel=$(pwd) 
 cp $wal_sel  ~/Pictures/wallpapers/wallpaper.png
-wal --vte -i $wal_sel
 feh --bg-fill ~/Pictures/wallpapers/wallpaper.png
-cat ~/.cache/wal/colors.Xresources >> ~/.Xresources 
 notify-send "Changing wallpaper $wal_sel" --icon=emblem-photos
-if [ "$DESKTOP_SESSION" = "bspwm" ] 
-	then  
-		# bash ~/.config/bspwm/bspwmrc 
-fi 
 
 
 
