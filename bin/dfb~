@@ -1,11 +1,11 @@
 #!/bin/bash 
 
-printf "Enter a commit message for dot files \n" 
-read dot_message
-printf "\n"
-printf "Enter a commit message for bash scripts repo \n"
-read bash_message
-printf "\n"
+# printf "Enter a commit message for dot files \n" 
+# read dot_message
+# printf "\n"
+# printf "Enter a commit message for bash scripts repo \n"
+# read bash_message
+# printf "\n"
 
 printf "Will now be backuping necessary dot files \n"  
 
@@ -57,38 +57,35 @@ cp -urv ~/bash_scripts/.  ~/Documents/Git_Projects/bash_scripts/
 printf "Cd into Git Repo \n" 
 cd ~/Documents/Git_Projects/dot_config_files/
 
-printf "Adding and commiting to dot config file repo \n"
+# printf "Adding and commiting to dot config file repo \n"
 
-printf "Git Add \n"    
-git add -A 
+# printf "Git Add \n"    
+# git add -A 
 
-printf "Git Commit \n"    
-git commit -m "$dot_message"
+# printf "Git Commit \n"    
+# git commit -m "$dot_message"
 
-printf "Git Push \n"    
-git push origin master
+# printf "Git Push \n"    
+# git push origin master
 
-printf "Adding and commiting to bash_scripts repo \n" 
+# printf "Adding and commiting to bash_scripts repo \n" 
 
-printf "Cd into Git Repo \n" 
-cd ~/Documents/Git_Projects/bash_scripts
+# printf "Cd into Git Repo \n" 
+# cd ~/Documents/Git_Projects/bash_scripts
 
-printf "Git Add \n"    
-git add -A 
+# printf "Git Add \n"    
+# git add -A 
 
-printf "Git Commit \n"    
-git commit -m "$bash_message"
+# printf "Git Commit \n"    
+# git commit -m "$bash_message"
 
-printf "Git Push \n"    
-git push origin master
+# printf "Git Push \n"    
+# git push origin master
 
-printf "Backing up bash scripts to usb" 
-cp -urv ~/bash_scripts/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/bash_scripts
+# printf "Backing up bash scripts to usb" 
+# cp -urv ~/bash_scripts/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/bash_scripts
 
-printf "Backing up dot files to usb" 
-cp -urv ~/Documents/Git_Projects/dot_config_files/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/dot_config_files
-
-
-
+# printf "Backing up dot files to usb" 
+# cp -urv ~/Documents/Git_Projects/dot_config_files/.  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/Documents/Git_Projects/dot_config_files
 
 
