@@ -7,7 +7,12 @@ printf "Enter a commit message for bash scripts repo \n"
 read bash_message
 printf "\n"
 
+printf "\n Backing up package list and installer \n"
+
+cp -urv ~/Desktop/{packages_install.sh, file_tranfer.sh} ~/Documents/Git_Projects/bash_scripts/.
+
 printf "Will now be backuping necessary dot files \n"  
+
 
 printf "Backuping emacs directory \n"  
 cp -urv ~/.emacs.d/{myinit.el,myinit.org,init.el} ~/Documents/Git_Projects/dot_config_files  && cp -urv ~/.emacs.d ~/back_emacs/
