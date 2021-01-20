@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/emacs.d/elpa
+find . -type f -name '*elc' -exec rm -v {} \;
