@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rsync -urvP --exclude '~/.local/share/Trash' /home/al/  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/ 
+
+# rsync -urvP --exclude '~/Videos' --exclude '~/.local/share/Trash' /home/al/  /media/al/Backup\ Plus/linux_experimental_backup_with_terminal/al/ 

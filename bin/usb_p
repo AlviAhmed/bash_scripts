@@ -1,0 +1,2 @@
+#!/bin/bash 
+rsync -urvP /home/al/MEGA/pnotes.txt  /media/al/4CF31FB158859A7B/. 
