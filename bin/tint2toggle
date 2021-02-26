@@ -1,0 +1,9 @@
+#!/bin/bash 
+tint2process=$(pgrep -x tint2)
+if [ -z "$tint2process"  ]; then
+  notify-send "starting tint2"
+  tint2 &
+else
+  notify-send "killing tint2"
+  killall tint2
+fi
