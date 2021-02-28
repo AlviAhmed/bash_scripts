@@ -1,0 +1,41 @@
+#!/bin/bash
+
+
+you_option="${1}"
+you_argument="${2}"
+links=~/MEGA/links.txt
+currDate="$(date +'%a_%b_%d_%Y')"
+parenDir="/home/al/Videos/downloaded_vids/"
+fullDir=$parenDir$currDate
+fullDirAudio=$parenDir$currDate/audio/
+fullDirWav=$parenDir$currDate/audio/wav/
+
+
+dirCheckFunc(){            # this function is in charge of creating the main resume storage and checking its existence
+    if [ -d "$fullDir" ];           
+    then
+        printf "Directory already exists for $currDate \n"
+    else                        
+        printf "Creating directory for $currDate \n"
+         mkdir -p $fullDirWav
+    fi
+}
+
+
+
+case "$you_option" in 
+    "l") echo "$you_argument" >> /home/al/MEGA/links.txt  && notify-send "adding link to list"
+         ;;
+    "d")  notify-send "started direct download" && dirCheckFunc && cd $fullDir && youtube-dl -o '%(title)s.%(ext)s' $you_argument && notify-send "complete"
+         ;;
+    "m")  notify-send "started audio download" && dirCheckFunc && cd $fullDirAudio && youtube-dl -f 140 -o '%(title)s.%(ext)s' $you_argument && notify-send "complete"
+         ;;
+    "wav")  notify-send "converting to wav" && dirCheckFunc && cd $fullDirAudio && mfc && mv *.wav wav &&  notify-send "complete"
+         ;;
+    "mp3")  notify-send "rsync started" && rsync -urP '/home/al/Music/temp_playlist/.' '/media/al/X52/Music/.' && rsync notify-send "complete"
+         ;;
+    "df") dirCheckFunc && cd $fullDir && notify-send "Downloading videos from the links file" &&  youtube-dl -a ~/MEGA/links.txt -o "%(title)s.%(ext)s" && notify-send  "Download done, clearing links file"
+esac
+
+
+                
