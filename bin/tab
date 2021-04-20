@@ -1,0 +1,4 @@
+#!/bin/sh
+window=$(xwininfo | grep "Window id" | awk '{print $4}') && notify-send "$window"; \
+tabbed=$(xwininfo | grep "Window id" | awk '{print $4}') && notify-send "$tabbed"; \
+xdotool windowreparent $window $tabbed

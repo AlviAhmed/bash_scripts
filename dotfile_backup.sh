@@ -68,7 +68,7 @@ printf "Git Add \n"
 git add -A 
 
 printf "Git Commit \n"    
-git commit -m "$dot_message"
+git commit -am "$dot_message"
 
 printf "Git Push \n"    
 git push origin master
@@ -82,7 +82,7 @@ printf "Git Add \n"
 git add -A 
 
 printf "Git Commit \n"    
-git commit -m "$bash_message"
+git commit -am "$bash_message"
 
 printf "Git Push \n"    
 git push origin master
