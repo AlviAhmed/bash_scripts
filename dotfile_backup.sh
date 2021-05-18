@@ -26,6 +26,9 @@ cp -urv ~/.bashrc ~/Documents/Git_Projects/dot_config_files
 printf "Backing up dwm \n"    
 cp -urv ~/dwm/. ~/Documents/Git_Projects/dot_config_files/dwm/
 
+printf "Backing up xmonad files \n"    
+cp -urv ~/.xmonad/xmonad.hs ~/Documents/Git_Projects/dot_config_files/xmonad/
+
 printf "Backing up openbox \n"    
 cp -urv ~/.config/openbox/. ~/Documents/Git_Projects/dot_config_files/openbox/
 
