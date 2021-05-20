@@ -1,0 +1,75 @@
+#!/bin/bash 
+
+
+brightness="${1}"
+
+sudo modprobe i2c-dev  &&
+    sudo ddcutil --bus=2 setvcp 10 $brightness
+
+# MCCS version: 2.2
+# Commands:
+#    Command: 01 (VCP Request)
+#    Command: 02 (VCP Response)
+#    Command: 03 (VCP Set)
+#    Command: 07 (Timing Request)
+#    Command: 0c (Save Settings)
+#    Command: e3 (Capabilities Reply)
+#    Command: f3 (Capabilities Request)
+# VCP Features:
+#    Feature: 02 (New control value)
+#    Feature: 04 (Restore factory defaults)
+#    Feature: 05 (Restore factory brightness/contrast defaults)
+#    Feature: 06 (Restore factory geometry defaults)
+#    Feature: 08 (Restore color defaults)
+#    Feature: 0B (Color temperature increment)
+#    Feature: 0C (Color temperature request)
+#    Feature: 0E (Clock)
+#    Feature: 10 (Brightness)
+#    Feature: 12 (Contrast)
+#    Feature: 14 (Select color preset)
+#       Values:
+#          01: sRGB
+#          05: 6500 K
+#          06: 7500 K
+#          08: 9300 K
+#          0b: User 1
+#    Feature: 16 (Video gain: Red)
+#    Feature: 18 (Video gain: Green)
+#    Feature: 1A (Video gain: Blue)
+#    Feature: 1E (Auto setup)
+#    Feature: 20 (Horizontal Position)
+#    Feature: 30 (Vertical Position)
+#    Feature: 3E (Clock phase)
+#    Feature: 52 (Active control)
+#    Feature: 60 (Input Source)
+#       Values:
+#          01: VGA-1
+#          03: DVI-1
+#          0f: DisplayPort-1
+#    Feature: 6C (Video black level: Red)
+#    Feature: 6E (Video black level: Green)
+#    Feature: 70 (Video black level: Blue)
+#    Feature: AC (Horizontal frequency)
+#    Feature: AE (Vertical frequency)
+#    Feature: B2 (Flat panel sub-pixel layout)
+#    Feature: B6 (Display technology type)
+#    Feature: C6 (Application enable key)
+#    Feature: C8 (Display controller type)
+#    Feature: C9 (Display firmware level)
+#    Feature: CC (OSD Language)
+#       Values:
+#          02: English
+#          03: French
+#          04: German
+#          05: Italian
+#          06: Japanese
+#          09: Russian
+#          0a: Spanish
+#          0d: Chinese (simplified / Kantai)
+#    Feature: D6 (Power mode)
+#       Values:
+#          01: DPM: On,  DPMS: Off
+#          04: DPM: Off, DPMS: Off
+#    Feature: DF (VCP Version)
+
+
