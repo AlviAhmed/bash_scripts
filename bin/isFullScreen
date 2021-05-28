@@ -1,0 +1,10 @@
+#!/bin/sh
+gRoot=$(xdotool search --maxdepth 0 '.*' getwindowgeometry | grep 'Geometry:')
+gActive=$(xdotool getactivewindow getwindowgeometry | grep 'Geometry:')
+if [ "$gRoot" = "$gActive" ]; then
+    echo "Pressing Escape Key" 
+    xdotool key F11
+    echo "The active window is fullscreened." 
+else
+    echo "The active window is not fullscreened."
+fi
